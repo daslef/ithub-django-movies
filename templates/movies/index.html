@@ -5,7 +5,15 @@
 
 {% block content %}
 <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <img src="{% static 'images/lithium.png' %}" class="img-fluid" alt="Lithium logo" />
-  <p class="lead">Movies</p>
+  <img src="{% static 'images/popcorn.avif' %}" class="w-80" alt="popcorn" />
+  <p class="text-xl">Movies</p>
+  <ul>
+    {% for movie in object_list %}
+    <li>
+      <a href="{% url 'movie' movie.id %}">{{ movie.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% include 'partials/pagination.html' %}
 </div>
 {% endblock content %}

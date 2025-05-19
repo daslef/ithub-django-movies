@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Movies: {{ object.title }}{% endblock title %}
+
+{% block content %}
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <img src="{% static 'images/popcorn.avif' %}" class="w-80" alt="popcorn" />
+    <ul>
+        <li>{{ object.title }}</li>
+        <li>{{ object.filmed }}</li>
+        <li>{{ object.duration }}</li>
+    </ul>
+</div>
+{% endblock content %}
