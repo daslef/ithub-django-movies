@@ -27,3 +27,6 @@ $ uv run manage.py runserver
 
 ## Using Lithium: A Django-Powered Boilerplate
 Lithium is a batteries-included Django starter project with everything you need to start coding, including user authentication, static files, default styling, debugging, DRY forms, custom error pages, and more.
+
+[Book](https://drive.google.com/file/d/1UrWMPcXkmpUWrlXG4w514QSx_hZJim9I/view?usp=sharing
+)

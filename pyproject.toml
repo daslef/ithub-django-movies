@@ -8,6 +8,7 @@ dependencies = [
   "crispy-bootstrap5 ~=2024.10",
   "psycopg[binary] ~=3.2",
   "whitenoise ~=6.7",
+  "Faker ~=37.3",
 ]
 
 [dependency-groups]
