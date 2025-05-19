@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     "debug_toolbar",
     # Local
     "accounts",
-    "pages",
+    "movies",
+    "feed",
 ]
 
 MIDDLEWARE = [
@@ -159,8 +160,6 @@ SITE_ID = 1
 
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_SESSION_REMEMBER = True
-ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
-ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_AUTHENTICATION_METHOD = "email"
-ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_LOGIN_METHODS = {"email"}
+ACCOUNT_SIGNUP_FIELDS = ["email*", "password1*"]
 ACCOUNT_UNIQUE_EMAIL = True
