@@ -16,5 +16,11 @@
         <p>{{ review.content }} {{ review.created }}</p>
         {% endfor %}
     </section>
+
+    <form action="{% url 'add_review' object.id  %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Review</button>
+    </form>
 </div>
 {% endblock content %}
