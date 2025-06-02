@@ -1,4 +1,8 @@
+from django.urls import reverse_lazy
+from django.views.decorators.http import require_POST
+from django.shortcuts import redirect, render
 from django.views.generic import ListView, DetailView
+from django.views.generic.edit import FormMixin
 from .models import Movie
 
 
@@ -8,6 +12,7 @@ class MoviesView(ListView):
     template_name = "movies/index.html"
 
 
-class MovieView(DetailView):
-    model = Movie
-    template_name = 'movies/detail.html'
+# class MovieView(FormMixin, DetailView):
+#     form_class = CreateCommentForm
+#     model = Movie
+#     template_name = "movies/detail.html"

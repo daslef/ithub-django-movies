@@ -9,4 +9,13 @@ class Movie(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.title} ({self.filmed.year})'
+        return f"{self.title} ({self.filmed.year})"
+
+
+class Review(models.Model):
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name="reviews")
+    content = models.CharField(max_length=2000)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"[{self.movie}] {self.content[:20]} ({self.created})"
