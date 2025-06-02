@@ -18,4 +18,4 @@ class Review(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"[{self.movie}] {self.content[:20]} ({self.created})"
+        return f"[{self.movie}] {self.content[:20]} ({self.created.day}.{self.created.month})"

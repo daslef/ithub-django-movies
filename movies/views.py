@@ -12,6 +12,11 @@ class MoviesView(ListView):
     template_name = "movies/index.html"
 
 
+class MovieView(DetailView):
+    template_name = "movies/detail.html"
+    model = Movie
+
+
 # class MovieView(FormMixin, DetailView):
 #     form_class = CreateCommentForm
 #     model = Movie

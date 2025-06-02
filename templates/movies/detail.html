@@ -10,18 +10,11 @@
         <li>{{ object.title }}</li>
         <li>{{ object.filmed }}</li>
         <li>{{ object.duration }}</li>
-        <li>
-            <ul>
-                {% for comment in object.comments.all %}
-                <li>{{ comment.content }}</li>
-                {% endfor %}
-            </ul>
-        </li>
-        <form action="{% url 'add_comment' object.id %}" method="post">
-            {{ form.as_p }}
-            {% csrf_token %}
-            <button type="submit">Add Comment</button>
-        </form>
     </ul>
+    <section>
+        {% for review in object.reviews.all %}
+        <p>{{ review.content }} {{ review.created }}</p>
+        {% endfor %}
+    </section>
 </div>
 {% endblock content %}
