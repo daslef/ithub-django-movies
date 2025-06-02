@@ -17,10 +17,19 @@
         {% endfor %}
     </section>
 
+    {% if user.is_authenticated %}
     <form action="{% url 'add_review' object.id  %}" method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+
+        {% for field in form %}
+        <section class="entry__container">
+            {{ field.label_tag }}
+            {{ field }}
+        </section>
+        {% endfor %}
+
         <button type="submit">Add Review</button>
     </form>
+    {% endif %}
 </div>
 {% endblock content %}

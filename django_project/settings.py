@@ -152,8 +152,8 @@ AUTHENTICATION_BACKENDS = (
 )
 
 AUTH_USER_MODEL = "accounts.CustomUser"
-LOGIN_REDIRECT_URL = "home"
-ACCOUNT_LOGOUT_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "movies"
+ACCOUNT_LOGOUT_REDIRECT_URL = "movies"
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#site-id
 SITE_ID = 1
